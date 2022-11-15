@@ -6,6 +6,10 @@
           revision="thirteen"
           review="gerrit.pixelexperience.org" />
 
+  <remote name="markakash"
+          fetch="https://github.com/pe-markakash"
+          revision="thirteen" />
+
   <remote name="pixel-gitlab"
           fetch="https://gitlab.com/PixelExperience/thirteen"
           revision="thirteen" />
@@ -39,18 +43,18 @@
   <project path="external/wpa_supplicant_8" name="external_wpa_supplicant_8" remote="pixel" />
 
   <!-- Framework repos -->
-  <project path="frameworks/av" name="frameworks_av" remote="pixel" />
-  <project path="frameworks/base" name="frameworks_base" remote="pixel" />
-  <project path="frameworks/native" name="frameworks_native" remote="pixel" />
+  <project path="frameworks/av" name="frameworks_av" remote="markakash" />
+  <project path="frameworks/base" name="frameworks_base" remote="markakash" />
+  <project path="frameworks/native" name="frameworks_native" remote="markakash" />
   <project path="frameworks/opt/net/ims" name="frameworks_opt_net_ims" remote="pixel" />
   <project path="frameworks/opt/net/wifi" name="frameworks_opt_net_wifi" remote="pixel" />
-  <project path="frameworks/opt/telephony" name="frameworks_opt_telephony" remote="pixel" />
+  <project path="frameworks/opt/telephony" name="frameworks_opt_telephony" remote="markakash" />
   <project path="frameworks/opt/timezonepicker" name="frameworks_opt_timezonepicker" remote="pixel" />
 
   <!-- General repos -->
-  <project path="art" name="art" remote="pixel" />
-  <project path="bionic" name="bionic" remote="pixel" />
-  <project path="build/make" name="build" remote="pixel">
+  <project path="art" name="art" remote="markakash" />
+  <project path="bionic" name="bionic" remote="markakash" />
+  <project path="build/make" name="build" remote="markakash">
     <copyfile src="core/root.mk" dest="Makefile" />
     <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
     <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
@@ -59,7 +63,7 @@
     <linkfile src="target" dest="build/target" />
     <linkfile src="tools" dest="build/tools" />
   </project>
-  <project path="build/soong" name="build_soong" remote="pixel" >
+  <project path="build/soong" name="build_soong" remote="markakash" >
     <linkfile src="root.bp" dest="Android.bp" />
     <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
   </project>
@@ -68,7 +72,7 @@
   <project path="development" name="development" remote="pixel" />
   <project path="device/google/cuttlefish" name="device_google_cuttlefish" remote="pixel" />
   <project path="kernel/configs" name="kernel_configs" remote="pixel" />
-  <project path="manifest" name="manifest" remote="pixel" />
+  <project path="manifest" name="manifest" remote="markakash" />
   <project path="libcore" name="libcore" remote="pixel" />
   <project path="platform_testing" name="platform_testing" remote="pixel" />
 
@@ -107,7 +111,7 @@
   <project path="packages/apps/CarrierConfig" name="packages_apps_CarrierConfig" remote="pixel" />
   <project path="packages/apps/Nfc" name="packages_apps_Nfc" remote="pixel" />
   <project path="packages/apps/PhoneCommon" name="packages_apps_PhoneCommon" remote="pixel" />
-  <project path="packages/apps/Settings" name="packages_apps_Settings" remote="pixel" />
+  <project path="packages/apps/Settings" name="packages_apps_Settings" remote="markakash" />
   <project path="packages/apps/Stk" name="packages_apps_Stk" remote="pixel" />
   <project path="packages/apps/Traceur" name="packages_apps_Traceur" remote="pixel" />
   <project path="packages/modules/adb" name="packages_modules_adb" remote="pixel" />
@@ -120,8 +124,8 @@
   <project path="packages/providers/DownloadProvider" name="packages_providers_DownloadProvider" remote="pixel" />
   <project path="packages/providers/MediaProvider" name="packages_providers_MediaProvider" remote="pixel" />
   <project path="packages/services/BuiltInPrintService" name="packages_services_BuiltInPrintService" remote="pixel" />
-  <project path="packages/services/Telecomm" name="packages_services_Telecomm" remote="pixel" />
-  <project path="packages/services/Telephony" name="packages_services_Telephony" remote="pixel" />
+  <project path="packages/services/Telecomm" name="packages_services_Telecomm" remote="markakash" />
+  <project path="packages/services/Telephony" name="packages_services_Telephony" remote="markakash" />
 
   <!-- Prebuilts -->
   <project path="prebuilts/build-tools" name="prebuilts_build-tools" remote="pixel" clone-depth="1" />
